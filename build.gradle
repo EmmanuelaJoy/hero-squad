@@ -1,10 +1,13 @@
 plugins {
     id 'groovy'
     id 'java'
+    id 'application'
 }
 
 group 'org.example'
 version '1.0-SNAPSHOT'
+
+mainClassName = 'App'
 
 repositories {
     mavenCentral()
