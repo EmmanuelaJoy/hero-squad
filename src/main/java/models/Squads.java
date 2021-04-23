@@ -12,9 +12,14 @@ public class Squads {
 
     public Squads(String name, String cause, int size, ArrayList<Heroes> heroes){
         this.name =name;
+        this.cause=cause;
     }
 
     public String getName() {
         return this.name;
+    }
+
+    public String getCause() {
+        return this.cause;
     }
 }

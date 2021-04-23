@@ -31,4 +31,11 @@ public class SquadsTest {
         Squads squad = new Squads("Champions", "fight corruption", 5, heroes);
         assertEquals("Champions", squad.getName());
     }
+
+    @Test
+    public void returnsSquadCauseCorrectly_true() {
+        ArrayList<Heroes> heroes = new ArrayList<>();
+        Squads squad = new Squads("Champions", "fight corruption", 5, heroes);
+        assertEquals("fight corruption", squad.getCause());
+    }
 }
