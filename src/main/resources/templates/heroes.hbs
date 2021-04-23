@@ -12,6 +12,7 @@
         {{#if heroes}}
 
             {{#each heroes}}
+
                 <div class="card mb-3" id="user">
                     <div class="row no-gutters">
                         <div class="col-md-4" id="profile">
@@ -38,6 +39,11 @@
         {{else}}
             <p>No Heroes Available!</p>
         {{/if}}
+
+        {{#if heroes}}
+            <a href="/heroes/delete"><button class="btn-info">Delete All Heroes</button></a>
+        {{/if}}
+
     </div>
 
 
