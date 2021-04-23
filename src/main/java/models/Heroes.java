@@ -15,6 +15,7 @@ public class Heroes {
     public Heroes(String name, int age, String power, String weakness) {
         this.name=name;
         this.age=age;
+        this.power=power;
     }
 
     public String getName() {
@@ -23,5 +24,9 @@ public class Heroes {
 
     public int getAge() {
         return this.age;
+    }
+
+    public String getPower() {
+        return this.power;
     }
 }
