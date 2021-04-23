@@ -1,0 +1,7 @@
+body{
+    background-image: url("../images/marvel1.jpg");
+}
+
+#heroImage{
+    width: inherit;
+}
