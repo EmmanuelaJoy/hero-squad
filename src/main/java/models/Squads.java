@@ -41,4 +41,12 @@ public class Squads {
     public static void clearAllSquads() {
         squadInstances.clear();
     }
+
+    public static Squads findById(int id) {
+        try {
+            return squadInstances.get(id-1);
+        } catch (IndexOutOfBoundsException exception) {
+            return null;
+        }
+    }
 }
