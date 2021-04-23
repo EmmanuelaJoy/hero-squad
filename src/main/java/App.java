@@ -45,6 +45,13 @@ public class App {
             return new ModelAndView(model, "heroes.hbs");
         }, new HandlebarsTemplateEngine());
 
+        get("/heroes/delete",(request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            Heroes.clearAllHeroes();
+            model.put("heroes",Heroes.getAllInstances());
+            return new ModelAndView(model,"heroes.hbs");
+        },new HandlebarsTemplateEngine());
+
 
     }
 }

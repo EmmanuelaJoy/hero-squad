@@ -19,6 +19,7 @@ public class Heroes {
         this.weakness=weakness;
         instances.add(this);
         this.id =instances.size();
+        this.squadMember = false;
     }
 
     public String getName() {
