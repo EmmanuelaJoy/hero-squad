@@ -18,6 +18,7 @@ public class Heroes {
         this.power=power;
         this.weakness=weakness;
         instances.add(this);
+        this.id =instances.size();
     }
 
     public String getName() {
@@ -42,5 +43,13 @@ public class Heroes {
 
     public static void clearAllHeroes() {
         instances.clear();
+    }
+
+    public static Heroes findById(int id) {
+        try {
+            return instances.get(id-1);
+        } catch (IndexOutOfBoundsException exception) {
+            return null;
+        }
     }
 }

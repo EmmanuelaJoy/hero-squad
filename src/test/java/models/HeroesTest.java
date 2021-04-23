@@ -55,10 +55,20 @@ public class HeroesTest {
     }
 
     @Test
-    public void allHeroesContainsAllHeroes_true() {
+    public void allHeroesContainsAllHeroesObjects_true() {
         Heroes hero = new Heroes("Emma", 20, "last-minute", "procrastination");
         Heroes otherHero = new Heroes ("Joy", 30, "coding", "debugging");
         assertTrue(Heroes.getAllInstances().contains(hero));
         assertTrue(Heroes.getAllInstances().contains(otherHero));
+    }
+
+    @Test
+    public void findHeroById() throws Exception {
+        Heroes hero = new Heroes("Emma", 20, "last-minute", "procrastination");
+        Heroes secondHero = new Heroes ("Joy", 30, "coding", "debugging");
+        Heroes foundHero = Heroes.findById(1);
+        Heroes foundSecondHero = Heroes.findById(2);
+        assertEquals(hero, foundHero);
+        assertEquals(secondHero, foundSecondHero);
     }
 }
