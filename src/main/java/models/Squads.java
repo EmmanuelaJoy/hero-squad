@@ -9,4 +9,8 @@ public class Squads {
     private int maxSize;
     private ArrayList<Heroes> heroes;
     private static List<Squads> squadInstances = new ArrayList<>();
+
+    public Squads(String name, String cause, int size, ArrayList<Heroes> heroes){
+
+    }
 }
