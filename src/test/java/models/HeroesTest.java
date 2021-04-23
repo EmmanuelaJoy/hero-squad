@@ -21,4 +21,10 @@ public class HeroesTest {
         Heroes hero = new Heroes("Emma", 20, "last-minute", "procrastination");
         assertEquals(true, hero instanceof Heroes);
     }
+
+    @Test
+    public void returnsHeroNameCorrectly_True() {
+        Heroes hero = new Heroes("Emma", 20, "last-minute", "procrastination");
+        assertEquals("Emma", hero.getName());
+    }
 }

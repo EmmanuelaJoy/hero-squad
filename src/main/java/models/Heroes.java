@@ -13,5 +13,10 @@ public class Heroes {
     private boolean squadMember;
 
     public Heroes(String name, int age, String power, String weakness) {
+        this.name=name;
+    }
+
+    public String getName() {
+        return this.name;
     }
 }
