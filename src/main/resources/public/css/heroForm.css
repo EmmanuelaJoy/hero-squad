@@ -1,0 +1,35 @@
+body{
+    background-image: url("../images/marvel1.jpg");
+}
+
+h2{
+    text-align: center;
+    color: white;
+    margin-top: 4em;
+    margin-bottom: -6em;
+}
+
+form{
+    border: 2px solid white;
+    padding: 1em;
+    margin: 10em;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgb(237 230 129);
+}
+
+.form-group{
+    padding: 0.5em;
+}
+
+.btn{
+    margin: 1em;
+}
+
+.btn:hover{
+    background-color: rgb(237 230 129);
+    color: black;
+    letter-spacing: 0.2em;
+    transition: 1500ms;
+    border: none;
+}
