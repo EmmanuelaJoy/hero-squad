@@ -50,7 +50,15 @@ public class HeroesTest {
     @Test
     public void allHeroesAreCorrectlyReturned_true() {
         Heroes hero = new Heroes("Emma", 20, "last-minute", "procrastination");
-        Heroes otherHero = new Heroes ("Joy", 50, "coding", "debugging");
+        Heroes otherHero = new Heroes ("Joy", 30, "coding", "debugging");
         assertEquals(2, Heroes.getAllInstances().size());
+    }
+
+    @Test
+    public void allHeroesContainsAllHeroes_true() {
+        Heroes hero = new Heroes("Emma", 20, "last-minute", "procrastination");
+        Heroes otherHero = new Heroes ("Joy", 30, "coding", "debugging");
+        assertTrue(Heroes.getAllInstances().contains(hero));
+        assertTrue(Heroes.getAllInstances().contains(otherHero));
     }
 }
