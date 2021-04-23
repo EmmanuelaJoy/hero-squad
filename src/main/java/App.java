@@ -44,5 +44,7 @@ public class App {
             model.put("heroes", heroes);
             return new ModelAndView(model, "heroes.hbs");
         }, new HandlebarsTemplateEngine());
+
+
     }
 }

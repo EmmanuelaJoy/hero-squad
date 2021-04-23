@@ -74,5 +74,9 @@ public class HeroesTest {
         assertEquals(secondHero, foundSecondHero);
     }
 
-
+    @Test
+    public void checkIfNewlyCreatedHeroIsSquadMember_false() {
+        Heroes hero = new Heroes("Emma", 20, "last-minute", "procrastination");
+        assertEquals(false, hero.isSquadMember());
+    }
 }
