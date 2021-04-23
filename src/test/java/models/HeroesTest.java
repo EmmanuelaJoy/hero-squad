@@ -4,6 +4,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.*;
 
 public class HeroesTest {
@@ -24,31 +26,31 @@ public class HeroesTest {
     }
 
     @Test
-    public void returnsHeroNameCorrectly_True() {
+    public void returnsHeroNameCorrectly_String() {
         Heroes hero = new Heroes("Emma", 20, "last-minute", "procrastination");
         assertEquals("Emma", hero.getName());
     }
 
     @Test
-    public void returnsHeroAgeCorrectly_True() {
+    public void returnsHeroAgeCorrectly_int() {
         Heroes hero = new Heroes("Emma", 20, "last-minute", "procrastination");
         assertEquals(20, hero.getAge());
     }
 
     @Test
-    public void returnsHeroPowerCorrectly_True() {
+    public void returnsHeroPowerCorrectly_String() {
         Heroes hero = new Heroes("Emma", 20, "last-minute", "procrastination");
         assertEquals("last-minute", hero.getPower());
     }
 
     @Test
-    public void returnsHeroWeaknessCorrectly_True() {
+    public void returnsHeroWeaknessCorrectly_String() {
         Heroes hero = new Heroes("Emma", 20, "last-minute", "procrastination");
         assertEquals("procrastination", hero.getWeakness());
     }
 
     @Test
-    public void allHeroesAreCorrectlyReturned_true() {
+    public void allHeroesAreCorrectlyReturned_int() {
         Heroes hero = new Heroes("Emma", 20, "last-minute", "procrastination");
         Heroes otherHero = new Heroes ("Joy", 30, "coding", "debugging");
         assertEquals(2, Heroes.getAllInstances().size());
@@ -71,4 +73,6 @@ public class HeroesTest {
         assertEquals(hero, foundHero);
         assertEquals(secondHero, foundSecondHero);
     }
+
+
 }
