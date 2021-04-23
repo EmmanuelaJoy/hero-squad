@@ -11,6 +11,10 @@ public class Squads {
     private static List<Squads> squadInstances = new ArrayList<>();
 
     public Squads(String name, String cause, int size, ArrayList<Heroes> heroes){
+        this.name =name;
+    }
 
+    public String getName() {
+        return this.name;
     }
 }

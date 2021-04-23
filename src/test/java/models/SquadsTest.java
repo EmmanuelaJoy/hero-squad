@@ -24,4 +24,11 @@ public class SquadsTest {
         Squads squad = new Squads("Champions", "fight corruption", 5, heroes);
         assertEquals(true, squad instanceof Squads);
     }
+
+    @Test
+    public void returnsSquadNameCorrectly_true() {
+        ArrayList<Heroes> heroes = new ArrayList<>();
+        Squads squad = new Squads("Champions", "fight corruption", 5, heroes);
+        assertEquals("Champions", squad.getName());
+    }
 }
