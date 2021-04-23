@@ -47,9 +47,18 @@ public class SquadsTest {
     }
 
     @Test
-    public void returnsSquadHeroesCorrectly_true() {
+    public void returnsSquadHeroesCorrectly_ArrayList() {
         ArrayList<Heroes> heroes = new ArrayList<>();
         Squads squad = new Squads("Champions", "fight corruption", 5, heroes);
         assertEquals(heroes, squad.getHeroes());
+    }
+
+    @Test
+    public void returnsAllSquadInstancesCorrectly_int() {
+        ArrayList<Heroes> heroes = new ArrayList<>();
+        Squads squad = new Squads("Champions", "fight corruption", 5, heroes);
+        Squads secondSquad = new Squads("Champions", "fight corruption", 3, heroes);
+        Squads thirdSquad = new Squads("Champions", "fight corruption", 2, heroes);
+        assertEquals(3, Squads.getSquadInstances().size());
     }
 }
