@@ -39,4 +39,10 @@ public class HeroesTest {
         Heroes hero = new Heroes("Emma", 20, "last-minute", "procrastination");
         assertEquals("last-minute", hero.getPower());
     }
+
+    @Test
+    public void returnsHeroWeaknessCorrectly_True() {
+        Heroes hero = new Heroes("Emma", 20, "last-minute", "procrastination");
+        assertEquals("procrastination", hero.getWeakness());
+    }
 }

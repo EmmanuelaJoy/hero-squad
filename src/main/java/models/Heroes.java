@@ -16,6 +16,7 @@ public class Heroes {
         this.name=name;
         this.age=age;
         this.power=power;
+        this.weakness=weakness;
     }
 
     public String getName() {
@@ -28,5 +29,9 @@ public class Heroes {
 
     public String getPower() {
         return this.power;
+    }
+
+    public String getWeakness() {
+        return this.weakness;
     }
 }
