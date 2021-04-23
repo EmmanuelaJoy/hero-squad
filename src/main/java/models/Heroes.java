@@ -12,4 +12,6 @@ public class Heroes {
     private static int id;
     private boolean squadMember;
 
+    public Heroes(String name, int age, String power, String weakness) {
+    }
 }
