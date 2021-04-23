@@ -14,6 +14,7 @@ public class Squads {
         this.name =name;
         this.cause=cause;
         this.maxSize=size;
+        this.heroes=heroes;
     }
 
     public String getName() {
@@ -26,5 +27,9 @@ public class Squads {
 
     public int getSize() {
         return this.maxSize;
+    }
+
+    public ArrayList<Heroes> getHeroes() {
+        return this.heroes;
     }
 }

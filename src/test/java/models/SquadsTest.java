@@ -26,23 +26,30 @@ public class SquadsTest {
     }
 
     @Test
-    public void returnsSquadNameCorrectly_true() {
+    public void returnsSquadNameCorrectly_String() {
         ArrayList<Heroes> heroes = new ArrayList<>();
         Squads squad = new Squads("Champions", "fight corruption", 5, heroes);
         assertEquals("Champions", squad.getName());
     }
 
     @Test
-    public void returnsSquadCauseCorrectly_true() {
+    public void returnsSquadCauseCorrectly_String() {
         ArrayList<Heroes> heroes = new ArrayList<>();
         Squads squad = new Squads("Champions", "fight corruption", 5, heroes);
         assertEquals("fight corruption", squad.getCause());
     }
 
     @Test
-    public void returnsSquadSizeCorrectly_true() {
+    public void returnsSquadSizeCorrectly_int() {
         ArrayList<Heroes> heroes = new ArrayList<>();
         Squads squad = new Squads("Champions", "fight corruption", 5, heroes);
         assertEquals(5, squad.getSize());
+    }
+
+    @Test
+    public void returnsSquadHeroesCorrectly_true() {
+        ArrayList<Heroes> heroes = new ArrayList<>();
+        Squads squad = new Squads("Champions", "fight corruption", 5, heroes);
+        assertEquals(heroes, squad.getHeroes());
     }
 }
