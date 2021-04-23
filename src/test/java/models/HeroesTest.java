@@ -14,6 +14,7 @@ public class HeroesTest {
 
     @After
     public void tearDown() throws Exception {
+        Heroes.clearAllPosts();
     }
 
     @Test
@@ -44,5 +45,12 @@ public class HeroesTest {
     public void returnsHeroWeaknessCorrectly_True() {
         Heroes hero = new Heroes("Emma", 20, "last-minute", "procrastination");
         assertEquals("procrastination", hero.getWeakness());
+    }
+
+    @Test
+    public void allHeroesAreCorrectlyReturned_true() {
+        Heroes hero = new Heroes("Emma", 20, "last-minute", "procrastination");
+        Heroes otherHero = new Heroes ("Joy", 50, "coding", "debugging");
+        assertEquals(2, Heroes.getAllInstances().size());
     }
 }

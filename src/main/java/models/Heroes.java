@@ -17,6 +17,7 @@ public class Heroes {
         this.age=age;
         this.power=power;
         this.weakness=weakness;
+        instances.add(this);
     }
 
     public String getName() {
@@ -33,5 +34,13 @@ public class Heroes {
 
     public String getWeakness() {
         return this.weakness;
+    }
+
+    public static ArrayList<Heroes> getAllInstances() {
+        return instances;
+    }
+
+    public static void clearAllPosts() {
+        instances.clear();
     }
 }
