@@ -27,4 +27,10 @@ public class HeroesTest {
         Heroes hero = new Heroes("Emma", 20, "last-minute", "procrastination");
         assertEquals("Emma", hero.getName());
     }
+
+    @Test
+    public void returnsHeroAgeCorrectly_True() {
+        Heroes hero = new Heroes("Emma", 20, "last-minute", "procrastination");
+        assertEquals(20, hero.getAge());
+    }
 }
