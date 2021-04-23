@@ -52,4 +52,8 @@ public class Heroes {
             return null;
         }
     }
+
+    public boolean isSquadMember() {
+        return squadMember;
+    }
 }
