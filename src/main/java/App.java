@@ -37,5 +37,12 @@ public class App {
             model.put("heroes", heroes);
             return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
+
+        get("/heroes", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            ArrayList<Heroes> heroes = Heroes.getAllInstances();
+            model.put("heroes", heroes);
+            return new ModelAndView(model, "heroes.hbs");
+        }, new HandlebarsTemplateEngine());
     }
 }
