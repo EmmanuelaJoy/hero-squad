@@ -16,6 +16,7 @@ public class SquadsTest {
 
     @After
     public void tearDown() throws Exception {
+        Squads.clearAllSquads();
     }
 
     @Test
@@ -57,8 +58,19 @@ public class SquadsTest {
     public void returnsAllSquadInstancesCorrectly_int() {
         ArrayList<Heroes> heroes = new ArrayList<>();
         Squads squad = new Squads("Champions", "fight corruption", 5, heroes);
-        Squads secondSquad = new Squads("Champions", "fight corruption", 3, heroes);
-        Squads thirdSquad = new Squads("Champions", "fight corruption", 2, heroes);
+        Squads secondSquad = new Squads("Peace-makers", "fight war", 3, heroes);
+        Squads thirdSquad = new Squads("Entrepreneurs", "fight unemployment", 2, heroes);
         assertEquals(3, Squads.getSquadInstances().size());
+    }
+
+    @Test
+    public void squadsContainsAllSquadObjects_true() {
+        ArrayList<Heroes> heroes = new ArrayList<>();
+        Squads squad = new Squads("Champions", "fight corruption", 5, heroes);
+        Squads secondSquad = new Squads("Peace-makers", "fight war", 3, heroes);
+        Squads thirdSquad = new Squads("Entrepreneurs", "fight unemployment", 2, heroes);
+        assertTrue(Squads.getSquadInstances().contains(squad));
+        assertTrue(Squads.getSquadInstances().contains(secondSquad));
+        assertTrue(Squads.getSquadInstances().contains(thirdSquad));
     }
 }

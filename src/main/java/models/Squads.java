@@ -2,7 +2,6 @@ package models;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class Squads {
     private String name;
@@ -37,5 +36,9 @@ public class Squads {
 
     public static List<Squads> getSquadInstances() {
         return squadInstances;
+    }
+
+    public static void clearAllSquads() {
+        squadInstances.clear();
     }
 }
