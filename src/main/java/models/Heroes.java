@@ -40,7 +40,7 @@ public class Heroes {
         return instances;
     }
 
-    public static void clearAllPosts() {
+    public static void clearAllHeroes() {
         instances.clear();
     }
 }

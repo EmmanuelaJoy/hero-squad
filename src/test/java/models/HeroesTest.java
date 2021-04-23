@@ -14,7 +14,7 @@ public class HeroesTest {
 
     @After
     public void tearDown() throws Exception {
-        Heroes.clearAllPosts();
+        Heroes.clearAllHeroes();
     }
 
     @Test
