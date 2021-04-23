@@ -42,6 +42,18 @@ public class Heroes {
         return instances;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public boolean isSquadMember() {
+        return squadMember;
+    }
+
+    public void deleteHero() {
+        instances.remove(id-1);
+    }
+
     public static void clearAllHeroes() {
         instances.clear();
     }
@@ -54,7 +66,5 @@ public class Heroes {
         }
     }
 
-    public boolean isSquadMember() {
-        return squadMember;
-    }
+
 }

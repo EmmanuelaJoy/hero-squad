@@ -65,6 +65,29 @@ public class HeroesTest {
     }
 
     @Test
+    public void checkIfNewlyCreatedHeroIsSquadMember_false() {
+        Heroes hero = new Heroes("Emma", 20, "last-minute", "procrastination");
+        assertFalse(hero.isSquadMember());
+    }
+
+    @Test
+    public void deletesSpecifiedHero() {
+        Heroes hero = new Heroes("Emma", 20, "last-minute", "procrastination");
+        Heroes otherHero = new Heroes ("Joy", 30, "coding", "debugging");
+        otherHero.deleteHero();
+        assertEquals(1, Heroes.getAllInstances().size());
+        assertEquals(Heroes.getAllInstances().get(0).getId(), 2);
+    }
+
+    @Test
+    public void deletesAllHeroes() {
+        Heroes hero = new Heroes("Emma", 20, "last-minute", "procrastination");
+        Heroes otherHero = new Heroes ("Joy", 30, "coding", "debugging");
+        Heroes.clearAllHeroes();
+        assertEquals(0, Heroes.getAllInstances().size());
+    }
+
+    @Test
     public void findHeroById() throws Exception {
         Heroes hero = new Heroes("Emma", 20, "last-minute", "procrastination");
         Heroes secondHero = new Heroes ("Joy", 30, "coding", "debugging");
@@ -74,9 +97,5 @@ public class HeroesTest {
         assertEquals(secondHero, foundSecondHero);
     }
 
-    @Test
-    public void checkIfNewlyCreatedHeroIsSquadMember_false() {
-        Heroes hero = new Heroes("Emma", 20, "last-minute", "procrastination");
-        assertEquals(false, hero.isSquadMember());
-    }
+
 }
