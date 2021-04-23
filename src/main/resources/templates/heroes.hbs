@@ -1,0 +1,46 @@
+{{#partial "styles"}}
+
+    <link rel='stylesheet' href='/css/heroes.css'>
+
+{{/partial}}
+
+{{#partial "content"}}
+
+    <h2>LIST OF HEROES</h2>
+
+    <div class="container">
+        {{#if heroes}}
+
+            {{#each heroes}}
+                <div class="card mb-3" id="user">
+                    <div class="row no-gutters">
+                        <div class="col-md-4" id="profile">
+                            <img id="heroImage" src="/images/marvel5.jpg" alt="Hero Image">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{{name}}</h5>
+                                <hr>
+                                <ul class="card-text">
+                                    <li>Age: {{age}}</li>
+                                    <li>Power: {{power}}</li>
+                                    <li>Weakness: {{weakness}}</li>
+                                    <li>Created on:</li>
+                                </ul>
+                                <a href="/heroes/{{id}}/delete"><button class="btn-info">Delete Hero</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            {{/each}}
+
+        {{else}}
+            <p>No Heroes Available!</p>
+        {{/if}}
+    </div>
+
+
+{{/partial}}
+
+{{> layout.hbs}}
