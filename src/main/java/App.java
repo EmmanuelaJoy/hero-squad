@@ -95,5 +95,11 @@ public class App {
             return new ModelAndView(model, "squadForm.hbs");
         }, new HandlebarsTemplateEngine());
 
+        get("/squads", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            model.put("squads", Squads.getSquadInstances());
+            return new ModelAndView(model, "squads.hbs");
+        }, new HandlebarsTemplateEngine());
+
     }
 }
