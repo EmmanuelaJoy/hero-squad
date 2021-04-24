@@ -53,8 +53,17 @@ public class App {
         },new HandlebarsTemplateEngine());
 
         get("/squads/new", (request, response) -> {
-            Map<String, Object> model = new HashMap<String, Object>();
-            return new ModelAndView(model, "squadForm.hbs");
+            Map<String, Object> model = new HashMap<>();
+            ArrayList<Heroes> heroes=Heroes.getAllInstances();
+            ArrayList<Heroes> heroesList=new ArrayList<>();
+            for (int i=0;i<heroes.size();i++){
+                if(heroes.get(i).isSquadMember()){
+                    heroesList.add(heroes.get(i));
+                }
+            }
+
+            model.put("heroes",Heroes.getAllInstances());
+            return new ModelAndView(model,"squadForm.hbs");
         }, new HandlebarsTemplateEngine());
 
 
