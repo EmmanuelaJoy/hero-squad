@@ -13,7 +13,8 @@ form{
     border: 2px solid white;
     font-size: 2rem;
     font-weight: 600;
-    color: rgb(237 230 129);
+    color: gold;
+    padding: 2em;
 }
 
 .form-group{
@@ -21,6 +22,7 @@ form{
 }
 
 .btn{
+    margin-top: 1.5em;
     margin: 1em;
 }
 
