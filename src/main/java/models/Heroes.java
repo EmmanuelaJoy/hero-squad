@@ -19,7 +19,6 @@ public class Heroes {
         this.weakness=weakness;
         instances.add(this);
         this.id =instances.size();
-        this.squadMember = false;
     }
 
     public String getName() {
@@ -42,12 +41,16 @@ public class Heroes {
         return instances;
     }
 
-    public int getId() {
+    public static int getId() {
         return id;
     }
 
     public boolean isSquadMember() {
         return squadMember;
+    }
+
+    public void updateHeroStatus(boolean squadMember){
+        this.squadMember=squadMember;
     }
 
     public void deleteHero() {
