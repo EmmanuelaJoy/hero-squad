@@ -8,7 +8,6 @@
 
     <h2>LIST OF HEROES</h2>
 
-    <div class="container">
         {{#if heroes}}
 
             {{#each heroes}}
@@ -37,14 +36,13 @@
             {{/each}}
 
         {{else}}
-            <p>No Heroes Available!</p>
+            <p id="noHeroes">No Heroes Available!</p>
         {{/if}}
 
         {{#if heroes}}
             <a href="/heroes/delete"><button class="btn-info">Delete All Heroes</button></a>
         {{/if}}
 
-    </div>
 
 
 {{/partial}}
