@@ -69,5 +69,7 @@ public class Heroes {
         }
     }
 
-
+    public static void setId(int id) {
+        Heroes.id = id;
+    }
 }

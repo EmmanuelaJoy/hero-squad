@@ -66,6 +66,34 @@ public class App {
             return new ModelAndView(model,"squadForm.hbs");
         }, new HandlebarsTemplateEngine());
 
+        post("/squads", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            String name = request.queryParams("squadName");
+            String cause=request.queryParams("squadCause");
+            int maxSize=Integer.parseInt(request.queryParams("squadSize"));
+            ArrayList<Heroes> heroes=new ArrayList<>();
+            if(request.queryParamsValues("squadHeroes")!=null){
+                String[] selectedHeroes= request.queryParamsValues("squadHeroes");
+
+
+                for(int i=1;i<=selectedHeroes.length;i++){
+                    Heroes addHero=Heroes.findById(i);
+                    if(heroes.size()<maxSize){
+                        if (addHero != null) {
+                            addHero.setId(i);
+                            addHero.updateHeroStatus(true);
+                        }
+                        heroes.add(addHero);
+                    }
+                }
+
+            }
+            Squads newSquad= new Squads(name,cause,maxSize,heroes);
+
+            model.put("heroes",Heroes.getAllInstances());
+
+            return new ModelAndView(model, "squadForm.hbs");
+        }, new HandlebarsTemplateEngine());
 
     }
 }

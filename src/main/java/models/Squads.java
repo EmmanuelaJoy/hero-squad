@@ -40,8 +40,8 @@ public class Squads {
         return squadInstances;
     }
 
-    public int getId() {
-        return id;
+    public int setId(int id) {
+        return this.id=id;
     }
 
     public static void clearAllSquads() {
@@ -55,4 +55,5 @@ public class Squads {
             return null;
         }
     }
+
 }
