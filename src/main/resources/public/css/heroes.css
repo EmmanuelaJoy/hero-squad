@@ -14,6 +14,10 @@ h2{
     color: white;
 }
 
+#hero{
+    margin: 1em;
+}
+
 #heroImage{
     width: inherit;
 }
