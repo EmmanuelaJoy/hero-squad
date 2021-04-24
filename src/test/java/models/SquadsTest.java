@@ -23,7 +23,7 @@ public class SquadsTest {
     public void instantiatesSquadObjectsWithHeroObjectsCorrectly_true() {
         ArrayList<Heroes> heroes = new ArrayList<>();
         Squads squad = new Squads("Champions", "fight corruption", 5, heroes);
-        assertEquals(true, squad instanceof Squads);
+        assertTrue(squad instanceof Squads);
     }
 
     @Test
@@ -86,5 +86,14 @@ public class SquadsTest {
         assertEquals(squad, foundSquad);
         assertEquals(secondSquad, foundSecondSquad);
         assertEquals(thirdSquad, foundThirdSquad);
+    }
+
+    @Test
+    public void deletesAllSquads() {
+        ArrayList<Heroes> heroes = new ArrayList<>();
+        Squads squad = new Squads("Champions", "fight corruption", 5, heroes);
+        Squads secondSquad = new Squads("Peace-makers", "fight war", 3, heroes);
+        Squads.clearAllSquads();
+        assertEquals(0, Squads.getSquadInstances().size());
     }
 }

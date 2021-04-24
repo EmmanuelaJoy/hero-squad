@@ -52,6 +52,11 @@ public class App {
             return new ModelAndView(model,"heroes.hbs");
         },new HandlebarsTemplateEngine());
 
+        get("/squads/new", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            return new ModelAndView(model, "squadForm.hbs");
+        }, new HandlebarsTemplateEngine());
+
 
     }
 }

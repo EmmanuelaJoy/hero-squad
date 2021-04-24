@@ -20,9 +20,9 @@ public class HeroesTest {
     }
 
     @Test
-    public void instantiatesHeroObjectsCorrectly_True() {
+    public void instantiatesHeroObjectsCorrectly_true() {
         Heroes hero = new Heroes("Emma", 20, "last-minute", "procrastination");
-        assertEquals(true, hero instanceof Heroes);
+        assertTrue(hero instanceof Heroes);
     }
 
     @Test

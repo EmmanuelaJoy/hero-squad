@@ -8,7 +8,8 @@ public class Squads {
     private String cause;
     private int maxSize;
     private ArrayList<Heroes> heroes;
-    private static List<Squads> squadInstances = new ArrayList<>();
+    private static ArrayList<Squads> squadInstances = new ArrayList<>();
+    private int id;
 
     public Squads(String name, String cause, int size, ArrayList<Heroes> heroes){
         this.name =name;
@@ -16,6 +17,7 @@ public class Squads {
         this.maxSize=size;
         this.heroes=heroes;
         squadInstances.add(this);
+        this.id = squadInstances.size();
     }
 
     public String getName() {
@@ -34,8 +36,12 @@ public class Squads {
         return this.heroes;
     }
 
-    public static List<Squads> getSquadInstances() {
+    public static ArrayList<Squads> getSquadInstances() {
         return squadInstances;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public static void clearAllSquads() {
