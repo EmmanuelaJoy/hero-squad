@@ -44,7 +44,7 @@ form{
 }
 
 .btn:hover{
-    background-color: rgb(237 230 129);
+    background-color: gold;
     color: black;
     transition: 1500ms;
     border: none;
