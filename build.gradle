@@ -1,9 +1,9 @@
 plugins {
-    id 'groovy'
     id 'java'
     id 'application'
 }
-apply plugin: 'maven'
+
+apply plugin:'maven'
 group 'org.example'
 version '1.0-SNAPSHOT'
 
@@ -14,12 +14,12 @@ repositories {
 }
 
 dependencies {
-    implementation "com.sparkjava:spark-core:2.6.0"
-    implementation "com.sparkjava:spark-template-handlebars:2.5.5"
-    implementation 'org.slf4j:slf4j-simple:1.7.21'
-    implementation 'org.codehaus.groovy:groovy-all:3.0.5'
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile "com.sparkjava:spark-core:2.6.0"
+    compile "com.sparkjava:spark-template-handlebars:2.5.5"
+    compile 'org.slf4j:slf4j-simple:1.7.21'
+//    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+//    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+//    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+//    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 }
