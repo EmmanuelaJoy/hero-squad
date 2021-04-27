@@ -87,11 +87,8 @@ public class App {
                 for(int i=1;i<=selectedHeroes.length;i++){
                     Heroes addHero=Heroes.findById(i);
                     if(heroes.size()<maxSize){
-                        if (addHero != null) {
-                            addHero.setId(i);
                             addHero.updateHeroStatus(true);
-                        }
-                        heroes.add(addHero);
+                            heroes.add(addHero);
                     }
                 }
 
@@ -99,6 +96,7 @@ public class App {
             Squads newSquad= new Squads(name,cause,maxSize,heroes);
 
             model.put("heroes",Heroes.getAllInstances());
+            model.put("squad", newSquad.getHeroes());
 
             return new ModelAndView(model, "squadForm.hbs");
         }, new HandlebarsTemplateEngine());

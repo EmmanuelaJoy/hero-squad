@@ -41,30 +41,30 @@
         </div>
 
         <div class="col-md-6">
-            {{#if squad.heroes}}
-                <div class="card  text-dark">
-
+            {{#if squad}}
+                <div class="card" id="squadHeroes">
                     <div class="card-body">
-                        <h4 class="card-title">{{squad.name}}</h4>
+                        <h5 class="card-title">{{squad.name}} HEROES</h5>
                         <hr>
-                        <p>Heroes :</p>
 
-                        {{#each squad.heroes}}
+                        {{#if squad.heroes}}
 
-                            <li class="card-text">{{name}}</li><
+                            {{#each squad.heroes}}
+                            <h3>Name: {{name}}</h3>
+                                <ul class="card-text">
+                                    <li><span>Age: </span>{{age}}</li>
+                                    <li><span>Special Power: </span>{{power}}</li>
+                                    <li><span>Weakness: </span>{{weakness}}</li>
+                                </ul>
                             <hr>
-                            <p class="card-text">Age : {{age}}</p>
-                            <p class="card-text">Special Powers : {{powers}}</p>
-                            <p class="card-text">Weakness: {{weakness}}</p>
+                            {{/each}}
 
-                        {{/each}}
-
+                        {{else}}
+                           <p id="noSquadsHeroes">No squad heroes available</p>
+                        {{/if}}
                     </div>
                 </div>
-            {{else}}
-                <p id="noSquadsHeroes">No squad heroes available</p>
             {{/if}}
-
         </div>
     </div>
 

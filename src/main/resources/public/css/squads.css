@@ -50,10 +50,19 @@ h2{
     color: white;
 }
 
+#squadHeroes{
+    background-color: aliceblue;
+}
+
+#squadHeroes h3{
+    color: gold;
+    font-weight: 400;
+}
+
 #noSquadsHeroes{
     text-align: center;
-    font-size: 3rem;
-    color: white;
+    font-size: 2rem;
+    color: black;
 }
 
 #delete{
