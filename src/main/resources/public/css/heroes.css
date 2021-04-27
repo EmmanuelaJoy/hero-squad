@@ -52,4 +52,10 @@ h2{
 .btn-info{
     padding: 0.5em;
     text-decoration: none;
+    margin: 1em;
+}
+
+.btn-info:hover{
+    background-color: gold;
+    transition: 1500ms;
 }

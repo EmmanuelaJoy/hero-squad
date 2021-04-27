@@ -54,3 +54,8 @@ h2{
     padding: 0.5em;
     text-decoration: none;
 }
+
+#delete:hover{
+    background-color: gold;
+    transition: 1500ms;
+}
