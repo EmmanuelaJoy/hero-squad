@@ -17,7 +17,7 @@ Click on [Emmanuela Joy ](https://github.com/EmmanuelaJoy) to find the link to h
 
 ## Demo
 
-Here is a working live demo : 
+Here is a working live demo : https://heroes-assemble.herokuapp.com/
 
 ## Set Up Instructions
 
@@ -36,6 +36,7 @@ Run `gradle build` to build the project.
 - Java.
 - Spark.
 - Gradle.
+- Maven.
 - Bootstrap.
 - JUnit.
 
