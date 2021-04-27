@@ -120,5 +120,15 @@ public class App {
             return new ModelAndView(model,"squads.hbs");
         },new HandlebarsTemplateEngine());
 
+        get("/squads/:id",(request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            int idOfSquadToFind=Integer.parseInt(request.params(":id"));
+            Squads foundSquad=Squads.findById(idOfSquadToFind);
+            model.put("squad",foundSquad);
+            ArrayList<Squads> squads=Squads.getSquadInstances();
+            model.put("squads",squads);
+            return new ModelAndView(model,"squads.hbs");
+        },new HandlebarsTemplateEngine());
+
     }
 }
