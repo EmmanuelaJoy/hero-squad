@@ -112,6 +112,10 @@ public class App {
         get("/squads/delete",(request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             Squads.clearAllSquads();
+            ArrayList<Heroes> heroes = Heroes.getAllInstances();
+            for(int i = 0; i<heroes.size(); i++){
+                heroes.get(i).updateHeroStatus(false);
+            }
             model.put("squads",Squads.getSquadInstances());
             return new ModelAndView(model,"squads.hbs");
         },new HandlebarsTemplateEngine());
