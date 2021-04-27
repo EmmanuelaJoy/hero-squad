@@ -63,5 +63,6 @@ h2{
 
 .btn-info:hover{
     background-color: gold;
+    color: black;
     transition: 1500ms;
 }
