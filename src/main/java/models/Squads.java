@@ -56,4 +56,7 @@ public class Squads {
         }
     }
 
+    public int getId() {
+        return id;
+    }
 }

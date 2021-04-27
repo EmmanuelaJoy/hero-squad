@@ -82,8 +82,6 @@ public class App {
             ArrayList<Heroes> heroes=new ArrayList<>();
             if(request.queryParamsValues("squadHeroes")!=null){
                 String[] selectedHeroes= request.queryParamsValues("squadHeroes");
-
-
                 for(int i=1;i<=selectedHeroes.length;i++){
                     Heroes addHero=Heroes.findById(i);
                     if(heroes.size()<maxSize){
@@ -91,10 +89,8 @@ public class App {
                             heroes.add(addHero);
                     }
                 }
-
             }
             Squads newSquad= new Squads(name,cause,maxSize,heroes);
-
             model.put("heroes",Heroes.getAllInstances());
             model.put("squad", newSquad.getHeroes());
 
